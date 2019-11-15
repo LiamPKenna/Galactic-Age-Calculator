@@ -16,4 +16,9 @@ export class Galactic {
     return planetLE;
   }
 
+  getAgeInMayflyLives(age) {
+    const mayflyLivesPerYear = 105120;
+    return age*mayflyLivesPerYear;
+  }
+
 }
