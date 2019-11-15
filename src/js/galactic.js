@@ -10,4 +10,9 @@ export class Galactic {
     return Math.floor(earthAge * this[`mod${planet}`]);
   }
 
+  getPlanetLE(user, planet) {
+    const planetLE = Math.floor(user.lifeExpectancy * this[`mod${planet}`]);
+    return planetLE;
+  }
+
 }
