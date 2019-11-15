@@ -7,4 +7,8 @@ import './css/styles.css';
 // USER INTERFACE
 $(document).ready(function(){
 
+  $('#user-input').submit(event => {
+    event.preventDefault();
+  });
+
 });
