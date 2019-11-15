@@ -24,4 +24,8 @@ describe('Galactic', () => {
     expect(galactic.modJupiter).toEqual(11.86);
   });
 
+  test('should return input age multiplied by the number for the selected planet', () => {
+    expect(galactic.getAge(20, "Mars")).toEqual(37.6);
+  })
+
 });
