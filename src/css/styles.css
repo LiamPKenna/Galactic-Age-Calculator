@@ -1,3 +1,11 @@
+body {
+  background-image: url('./../img/space.gif');
+}
+
+.start {
+  padding-top: 8%;
+}
+
 .user-input-div {
   text-align: center;
   padding: 20px;
@@ -23,5 +31,28 @@ select {
 }
 
 #health-label {
+  width: 100%;
+}
+
+.earth {
+  width: 100%;
+  text-align: center;
+}
+
+.planet {
+  width: 100%;
+  display: block;
+  margin: 0;
+}
+
+.planets {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.planet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
 }
