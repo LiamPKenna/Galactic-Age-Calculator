@@ -44,23 +44,33 @@ select {
   text-align: center;
 }
 
-.planet {
+/* .planet {
   width: 100%;
   display: block;
   margin: 0;
-}
+} */
 
 .planets {
   padding-top: 2%;
-  width: 100%;
   overflow: hidden;
   text-align: center;
   display: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
 }
 
 .planet-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
-  max-width: 1000px;
+  max-width: 100%;
+}
+
+.age-modal {
+  padding: 30px;
 }

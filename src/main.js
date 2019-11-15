@@ -3,6 +3,7 @@ import 'bootstrap';
 import './css/bootstrap.min.css';
 import './css/styles.css';
 import { User } from './js/user.js';
+// Images from https://space-facts.com/transparent-planet-pictures/
 import earth from './img/earth.png';
 import mercury from './img/mercury.png';
 import venus from './img/venus.png';
@@ -23,9 +24,11 @@ $(document).ready(function(){
     const healthInput = parseInt($('#health-input').val());
     if (ageInput) {
       user = new User(ageInput, genderInput, healthInput);
+      $('.start').hide();
+      $('.planets').fadeIn();
       console.log(user);
     } else {
-      alert('Please enter your age!');
+      $(".enter-age-modal").modal("show");
     }
 
   });
