@@ -44,12 +44,6 @@ select {
   text-align: center;
 }
 
-/* .planet {
-  width: 100%;
-  display: block;
-  margin: 0;
-} */
-
 .planets {
   padding-top: 2%;
   overflow: hidden;
@@ -73,4 +67,12 @@ img {
 
 .age-modal {
   padding: 30px;
+}
+
+.planet-info {
+  padding: 50px;
+}
+
+#start-over {
+  margin-top: 50px;
 }
