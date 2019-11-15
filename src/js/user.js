@@ -6,6 +6,7 @@ export class User {
     this.gender = gender;
     this.health = health;
     this.lifeExpectancyEarth = this.getLifeExpectancy();
+    this.getGalacticAge();
     this.getGalacticLifeExpectancy();
   }
 
@@ -17,6 +18,14 @@ export class User {
     return baselE + Math.floor((this.health-5)/15 * baselE);
   }
 
+  getGalacticAge() {
+    let galactic = new Galactic();
+    galactic.planets.forEach(planet => {
+      const planetAge = galactic.getAge(this.age, planet);
+      this[`age${planet}`] = planetAge;
+    });
+  }
+
   getGalacticLifeExpectancy() {
     let galactic = new Galactic();
     galactic.planets.forEach(planet => {
@@ -24,5 +33,13 @@ export class User {
       this[`lifeExpectancy${planet}`] = planetLE;
     });
   }
+
+  // getYearsLeft() {
+  //   let galactic = new Galactic();
+  //   galactic.planets.forEach(planet => {
+  //     const planetYL = (this.lifeExpectancyEarth, planet);
+  //     this[`lifeExpectancy${planet}`] = planetLE;
+  //   });
+  // }
 
 }
