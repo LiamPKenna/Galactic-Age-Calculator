@@ -39,6 +39,10 @@ describe('Galactic', () => {
     expect(galactic.getPlanetLE(user.lifeExpectancyEarth, 'Venus')).toEqual(55);
   });
 
+  test('should return user age in mayfly lifespans', () => {
+    expect(galactic.getAgeInMayflyLives(20)).toEqual(2102400);
+  });
+
 });
 
 describe('User', () => {
