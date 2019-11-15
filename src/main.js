@@ -15,8 +15,13 @@ $(document).ready(function(){
     const ageInput = parseInt($('#age-input').val());
     const genderInput = $('#gender-input').val();
     const healthInput = parseInt($('#health-input').val());
-    user = new User(ageInput, genderInput, healthInput);
-    console.log(user);
+    if (ageInput) {
+      user = new User(ageInput, genderInput, healthInput);
+      console.log(user);
+    } else {
+      alert('Please enter your age!');
+    }
+
   });
 
 });
