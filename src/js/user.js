@@ -3,5 +3,8 @@ export class User {
     this.age = age;
     this.gender = gender;
     this.health = health;
+    this.aveLEM = 76;
+    this.aveLEF = 81;
+    this.aveLEN = 79;
   }
 }
