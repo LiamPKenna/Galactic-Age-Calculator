@@ -60,7 +60,6 @@ describe('User', () => {
   });
 
   test('should use galactic calculator to get life expectancy for each available planet', () => {
-    user.getGalacticLifeExpectancy();
     expect(user.lifeExpectancyVenus).toEqual(55);
   });
 

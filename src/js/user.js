@@ -6,6 +6,7 @@ export class User {
     this.gender = gender;
     this.health = health;
     this.lifeExpectancyEarth = this.getLifeExpectancy();
+    this.getGalacticLifeExpectancy();
   }
 
   getLifeExpectancy() {
