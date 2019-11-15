@@ -19,6 +19,9 @@ describe('Galactic', () => {
   });
 
   // Returns their age in Mars years. (A Mars year is 1.88 Earth years.)
+  test('should construct an object with the multiplier for Mars', () => {
+    expect(galactic.modMars).toEqual(1.88);
+  });
 
   // Returns their age in Jupiter years. (A Jupiter year is 11.86 Earth years.)
 
