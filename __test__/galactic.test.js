@@ -11,7 +11,7 @@ describe('Galactic', () => {
     user = new User(20, "N", 7);
   });
 
-  test('should construct an object containing an array of available planets' () => {
+  test('should construct an object containing an array of available planets', () => {
     expect(galactic.planets).toEqual(['Mercury','Venus','Mars','Jupiter']);
   });
 
@@ -36,7 +36,7 @@ describe('Galactic', () => {
   });
 
   test('should return user\'s life expectancy for the selected planet', () => {
-    expect(galactic.getPlanetLE(user.earthLifeExpectancy, 'Venus')).toEqual(55);
+    expect(galactic.getPlanetLE(user.lifeExpectancyEarth, 'Venus')).toEqual(55);
   });
 
 });
@@ -56,7 +56,12 @@ describe('User', () => {
   });
 
   test('should calculate life expectancy based on gender and health', () => {
-    expect(user.earthLifeExpectancy).toEqual(89);
+    expect(user.lifeExpectancyEarth).toEqual(89);
+  });
+
+  test('should use galactic calculator to get life expectancy for each available planet', () => {
+    user.getGalacticLifeExpectancy();
+    expect(user.lifeExpectancyVenus).toEqual(55);
   });
 
 });
