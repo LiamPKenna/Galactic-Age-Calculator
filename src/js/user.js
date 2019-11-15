@@ -12,10 +12,8 @@ export class User {
   }
 
   getLifeExpectancy() {
-    const aveLEM = 76;
-    const aveLEF = 81;
-    const aveLEN = 79;
-    const baselE = eval(`aveLE${this.gender}`);
+    const averageLE = {"F":81,"N":79,"M":76};
+    const baselE = averageLE[this.gender];
     return baselE + Math.floor((this.health-5)/15 * baselE);
   }
 
