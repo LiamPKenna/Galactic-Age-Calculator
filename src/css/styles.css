@@ -7,3 +7,18 @@ select {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
+#bad {
+  text-align: left;
+  font-size: 14px;
+  margin-right: 20%;
+}
+#great {
+  text-align: right;
+  font-size: 14px;
+  margin-left: 20%;
+}
+
+#health-label {
+  width: 100%;
+}

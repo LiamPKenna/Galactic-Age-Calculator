@@ -11,12 +11,12 @@
         <form id="user-input">
           <input id="age-input" class="form-control-lg" type="number" name="age" placeholder="Your Age">
           <select id="gender-input" class="form-control form-control-lg">
-            <option value="">Gender</option>
+            <option value="" disabled>Gender</option>
             <option value="F">Female</option>
             <option value="M">Male</option>
             <option value="N">Non-Binary</option>
           </select>
-          <label for="health">Health</label>
+          <label for="health" id="health-label"><h4>Health</h4><span id="bad">BAD</span><span id="great">GREAT</span></label>
           <input type="range" id="health-input" class="form-control-range" name="health" min="1" max="10" step="1">
         </form>
       </div>
