@@ -5,4 +5,9 @@ export class Galactic {
     this.modMars = 1.88;
     this.modJupiter = 11.86;
   }
+
+  getAge(earthAge, planet) {
+    return Math.floor(earthAge * this[`mod${planet}`]);
+  }
+
 }
