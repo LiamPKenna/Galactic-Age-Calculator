@@ -51,4 +51,8 @@ describe('User', () => {
     expect(user.aveLEN).toEqual(79);
   });
 
+  test('should calculate life expectancy based on gender and health', () => {
+    expect(user.lifeExpectancy).toEqual(89);
+  });
+
 });
