@@ -79,4 +79,9 @@ describe('User', () => {
     expect(user.yearsLeftVenus).toEqual(43);
   });
 
+  test('should calculate user age compared to sun age and mayfly lifespan', () => {
+    expect(user.ageRelativeToSun).toEqual(4.344992396263306e-9);
+    expect(user.ageInMayflyLives).toEqual(2102400);
+  });
+
 });
