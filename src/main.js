@@ -11,6 +11,8 @@ import mars from './img/mars.png';
 import jupiter from './img/jupiter.png';
 import sun from './img/sun.png';
 
+import { buildPlanetInfo } from './js/templates.js';
+
 
 // USER INTERFACE
 $(document).ready(function(){
@@ -28,16 +30,24 @@ $(document).ready(function(){
       $('.planets').fadeIn();
       console.log(user);
     } else {
-      $(".enter-age-modal").modal("show");
+      $('.enter-age-modal').modal('show');
     }
+  });
 
+  $('.planets').on('click', 'img', (event) => {
+    const thisPlanet = event.target.id;
+    const planetInfoHtml = buildPlanetInfo(thisPlanet, user);
+    console.log(planetInfoHtml);
+    $('.planet-info').text('');
+    $('.planet-info').append(planetInfoHtml);
+    $('.planet-modal').modal('show')
   });
 
   $('.earth').append(`<img class"planet" src="${earth}" alt="earth">`);
-  $('.mercury').append(`<img class"planet" src="${mercury}" alt="mercury">`);
-  $('.venus').append(`<img class"planet" src="${venus}" alt="venus">`);
-  $('.mars').append(`<img class"planet" src="${mars}" alt="mars">`);
-  $('.jupiter').append(`<img class"planet" src="${jupiter}" alt="jupiter">`);
-  $('.sun').append(`<img class"sun" src="${sun}" alt="sun">`);
+  $('.mercury').append(`<img id="Mercury" class"planet" src="${mercury}" alt="mercury">`);
+  $('.venus').append(`<img id="Venus" class"planet" src="${venus}" alt="venus">`);
+  $('.mars').append(`<img id="Mars" class"planet" src="${mars}" alt="mars">`);
+  $('.jupiter').append(`<img id="Jupiter" class"planet" src="${jupiter}" alt="jupiter">`);
+  $('.sun').append(`<img id="Sun" class"sun" src="${sun}" alt="sun">`);
 
 });
