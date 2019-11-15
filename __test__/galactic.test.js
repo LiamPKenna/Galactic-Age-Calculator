@@ -11,6 +11,10 @@ describe('Galactic', () => {
     user = new User(20, "N", 7);
   });
 
+  test('should construct an object containing an array of available planets' () => {
+    expect(galactic.planets).toEqual(['Mercury','Venus','Mars','Jupiter']);
+  });
+
   test('should construct an object with the multiplier for Mercury', () => {
     expect(galactic.modMercury).toEqual(.24);
   });
