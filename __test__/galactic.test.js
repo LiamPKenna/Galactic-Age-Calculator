@@ -4,9 +4,11 @@ import { User } from './../src/js/user.js';
 describe('Galactic', () => {
 
   let galactic;
+  let user;
 
   beforeEach(() => {
     galactic = new Galactic();
+    user = new User(20, "N", 7);
   });
 
   test('should construct an object with the multiplier for Mercury', () => {
@@ -27,6 +29,10 @@ describe('Galactic', () => {
 
   test('should return input age multiplied by the number for the selected planet', () => {
     expect(galactic.getAge(20, "Mars")).toEqual(37);
+  });
+
+  test('should return user\'s life expectancy for the selected planet', () => {
+    expect(galactic.getLE(user, 'Venus')).toEqual(55);
   });
 
 });
