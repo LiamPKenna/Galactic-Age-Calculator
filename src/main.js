@@ -11,7 +11,7 @@ import mars from './img/mars.png';
 import jupiter from './img/jupiter.png';
 import sun from './img/sun.png';
 
-import { buildPlanetInfo } from './js/templates.js';
+import { buildPlanetInfo, buildSunInfo } from './js/templates.js';
 
 
 // USER INTERFACE
@@ -28,7 +28,6 @@ $(document).ready(function(){
       user = new User(ageInput, genderInput, healthInput);
       $('.start').hide();
       $('.planets').fadeIn();
-      console.log(user);
     } else {
       $('.enter-age-modal').modal('show');
     }
@@ -36,11 +35,20 @@ $(document).ready(function(){
 
   $('.planets').on('click', 'img', (event) => {
     const thisPlanet = event.target.id;
-    const planetInfoHtml = buildPlanetInfo(thisPlanet, user);
-    console.log(planetInfoHtml);
+    let planetInfoHtml;
+    if (thisPlanet === "Sun") {
+      planetInfoHtml = buildSunInfo(user);
+    } else {
+      planetInfoHtml = buildPlanetInfo(thisPlanet, user);
+    }
     $('.planet-info').text('');
     $('.planet-info').append(planetInfoHtml);
-    $('.planet-modal').modal('show')
+    $('.planet-modal').modal('show');
+  });
+
+  $('#start-over').click(() => {
+    window.scrollTo(0,0);
+    location.reload();
   });
 
   $('.earth').append(`<img class"planet" src="${earth}" alt="earth">`);
