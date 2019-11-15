@@ -3,8 +3,10 @@ export function buildPlanetInfo(planet, user) {
   const planetLE = user[`lifeExpectancy${planet}`];
   const planetYL = user[`yearsLeft${planet}`];
   let result = `
-  <h3>Your age in ${planet} years is: ${planetAge}</h3>
-  <h3>Your life expectancy is ${planetLE} ${planet} years</h3>
+    <h3>Your age in ${planet} years is: ${planetAge}</h3>
+    <br>
+    <h3>Your life expectancy is ${planetLE} ${planet} years</h3>
+    <br>
   `;
   if (planetLE > planetAge) {
     result += `
@@ -16,4 +18,11 @@ export function buildPlanetInfo(planet, user) {
     `;
   }
   return result;
+}
+
+export function buildSunInfo(user) {
+  return `
+    <h3>Your age relative to the sun is: ${user.ageRelativeToSun} years old.</h3><br>
+    <h3>If that makes you like a tiny speck of dust, take heart. You have already lived the equivalent of ${user.ageInMayflyLives} mayfly lifetimes!</h3>
+  `;
 }
