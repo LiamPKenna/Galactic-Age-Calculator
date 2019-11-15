@@ -63,4 +63,8 @@ describe('User', () => {
     expect(user.lifeExpectancyVenus).toEqual(55);
   });
 
+  test('should determine how many years a user has left to live on each planet', () => {
+    expect(user.yearsLeftVenus).toEqual(35);
+  });
+
 });
