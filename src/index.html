@@ -9,8 +9,10 @@
     <div class="container">
       <div class="user-input-div card bg-info">
         <form id="user-input">
-          <input id="age-input" class="form-control-lg" type="number" name="age" placeholder="Your Age">
-          <select id="gender-input" class="form-control form-control-lg">
+          <label for="age" id="age-label"><h4>Age</h4></label>
+          <input id="age-input" class="form-control form-control-lg" type="number" name="age" placeholder="Your Age"><br>
+          <label for="gender" id="gender-label"><h4>Gender</h4></label>
+          <select name="gender" id="gender-input" class="form-control form-control-lg">
             <option value="" disabled>Gender</option>
             <option value="F">Female</option>
             <option value="M">Male</option>
