@@ -8,11 +8,14 @@ import { User } from './js/user.js';
 // USER INTERFACE
 $(document).ready(function(){
 
-
+  let user;
 
   $('#user-input').submit(event => {
     event.preventDefault();
-    let user = new User(20, "N", 7);
+    const ageInput = parseInt($('#age-input').val());
+    const genderInput = $('#gender-input').val();
+    const healthInput = parseInt($('#health-input').val());
+    user = new User(ageInput, genderInput, healthInput);
     console.log(user);
   });
 
