@@ -45,12 +45,6 @@ describe('User', () => {
     expect(user.health).toEqual(7);
   });
 
-  test('should have stored average life expectancy for Male, Female, and Non-Binary', () => {
-    expect(user.aveLEM).toEqual(76);
-    expect(user.aveLEF).toEqual(81);
-    expect(user.aveLEN).toEqual(79);
-  });
-
   test('should calculate life expectancy based on gender and health', () => {
     expect(user.lifeExpectancy).toEqual(89);
   });
