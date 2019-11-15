@@ -3,14 +3,14 @@ export class User {
     this.age = age;
     this.gender = gender;
     this.health = health;
-    this.aveLEM = 76;
-    this.aveLEF = 81;
-    this.aveLEN = 79;
     this.lifeExpectancy = this.getLifeExpectancy();
   }
 
   getLifeExpectancy() {
-    const baselE = this[`aveLE${this.gender}`];
+    const aveLEM = 76;
+    const aveLEF = 81;
+    const aveLEN = 79;
+    const baselE = eval(`aveLE${this.gender}`);
     return baselE + Math.floor((this.health-5)/15 * baselE);
   }
 
