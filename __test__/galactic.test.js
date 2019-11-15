@@ -32,7 +32,7 @@ describe('Galactic', () => {
   });
 
   test('should return user\'s life expectancy for the selected planet', () => {
-    expect(galactic.getPlanetLE(user, 'Venus')).toEqual(55);
+    expect(galactic.getPlanetLE(user.lifeExpectancy, 'Venus')).toEqual(55);
   });
 
 });
