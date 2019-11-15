@@ -43,6 +43,10 @@ describe('Galactic', () => {
     expect(galactic.getAgeInMayflyLives(20)).toEqual(2102400);
   });
 
+  test('should calculate user age relative to the age of the sun', () => {
+    expect(galactic.getAgeRelativeToSun(20)).toEqual(4.344992396263306e-9);
+  });
+
 });
 
 describe('User', () => {
