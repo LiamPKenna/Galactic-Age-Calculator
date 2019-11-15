@@ -1,4 +1,5 @@
 import { Galactic } from './../src/js/galactic.js';
+import { User } from './../src/js/user.js';
 
 describe('Galactic', () => {
 
@@ -26,6 +27,22 @@ describe('Galactic', () => {
 
   test('should return input age multiplied by the number for the selected planet', () => {
     expect(galactic.getAge(20, "Mars")).toEqual(37);
+  })
+
+});
+
+describe('User', () => {
+
+  let user;
+
+  beforeEach(() => {
+    user = new User(20, "N", 7);
+  });
+
+  test('should create a user with input age, gender, and general health (1-10)', () => {
+    expect(user.age).toEqual(20);
+    expect(user.gender).toEqual("N");
+    expect(user.health).toEqual(7);
   })
 
 });
