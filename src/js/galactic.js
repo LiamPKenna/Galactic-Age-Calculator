@@ -16,6 +16,11 @@ export class Galactic {
     return planetLE;
   }
 
+  getAgeRelativeToSun(age) {
+    let ageOfSun = 4603000000;
+    return age/ageOfSun;
+  }
+
   getAgeInMayflyLives(age) {
     const mayflyLivesPerYear = 105120;
     return age*mayflyLivesPerYear;
