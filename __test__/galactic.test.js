@@ -59,12 +59,16 @@ describe('User', () => {
     expect(user.lifeExpectancyEarth).toEqual(89);
   });
 
+  test('should use galactic calculator to get current age for each available planet', () => {
+    expect(user.ageMars).toEqual(37);
+  });
+
   test('should use galactic calculator to get life expectancy for each available planet', () => {
     expect(user.lifeExpectancyVenus).toEqual(55);
   });
 
-  test('should determine how many years a user has left to live on each planet', () => {
-    expect(user.yearsLeftVenus).toEqual(35);
-  });
+  // test('should determine how many years a user has left to live on each planet', () => {
+  //   expect(user.yearsLeftVenus).toEqual(35);
+  // });
 
 });
