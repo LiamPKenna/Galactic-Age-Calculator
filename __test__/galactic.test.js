@@ -27,7 +27,7 @@ describe('Galactic', () => {
 
   test('should return input age multiplied by the number for the selected planet', () => {
     expect(galactic.getAge(20, "Mars")).toEqual(37);
-  })
+  });
 
 });
 
@@ -43,6 +43,12 @@ describe('User', () => {
     expect(user.age).toEqual(20);
     expect(user.gender).toEqual("N");
     expect(user.health).toEqual(7);
-  })
+  });
+
+  test('should have stored average life expectancy for Male, Female, and Non-Binary', () => {
+    expect(user.aveLEM).toEqual(76);
+    expect(user.aveLEF).toEqual(81);
+    expect(user.aveLEN).toEqual(79);
+  });
 
 });
