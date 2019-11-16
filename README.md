@@ -27,7 +27,7 @@ _Additionally, clicking on the sun will provide a users age relative to the age 
 * _Navigate to the folder containing this README_
 * _Run "npm i"_
 * _Run "npm run start"_
-* _This site can be viewed in it's current form at https://LiamPKenna.github.io/{PROJECT}_
+* _This site can be viewed in it's current form at https://liampkenna.github.io/Galactic-Age-Calculator/_
 
 
 _To explore the source code, feel free to browse on github or clone to your local machine_
