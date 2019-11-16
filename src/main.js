@@ -1,8 +1,12 @@
+// UTILITIES
 import $ from 'jquery';
 import 'bootstrap';
 import './css/bootstrap.min.css';
 import './css/styles.css';
+
+// MAIN LOGIC
 import { User } from './js/user.js';
+
 // Images from https://space-facts.com/transparent-planet-pictures/
 import earth from './img/earth.png';
 import mercury from './img/mercury.png';
@@ -11,6 +15,7 @@ import mars from './img/mars.png';
 import jupiter from './img/jupiter.png';
 import sun from './img/sun.png';
 
+// TEMPLATING
 import { buildPlanetInfo, buildSunInfo } from './js/templates.js';
 
 
