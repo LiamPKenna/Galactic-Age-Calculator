@@ -15,6 +15,18 @@ import mars from './img/mars.png';
 import jupiter from './img/jupiter.png';
 import sun from './img/sun.png';
 
+// AUDIO
+import sunMp3 from './mp3/sun.mp3';
+const sunSound = new Audio();
+sunSound.src = sunMp3;
+import noAgeMp3 from './mp3/noage.mp3';
+const noAgeSound = new Audio();
+noAgeSound.src = noAgeMp3;
+import planetMp3 from './mp3/plnt.mp3';
+const planetSound = new Audio();
+planetSound.src = planetMp3;
+
+
 // TEMPLATING
 import { buildPlanetInfo, buildSunInfo } from './js/templates.js';
 
@@ -35,6 +47,7 @@ $(document).ready(function(){
       $('.planets').fadeIn();
     } else {
       $('.enter-age-modal').modal('show');
+      noAgeSound.play();
     }
   });
 
@@ -43,12 +56,14 @@ $(document).ready(function(){
     let planetInfoHtml;
     if (thisPlanet === "Sun") {
       planetInfoHtml = buildSunInfo(user);
+      sunSound.play();
     } else {
       planetInfoHtml = buildPlanetInfo(thisPlanet, user);
     }
     $('.planet-info').text('');
     $('.planet-info').append(planetInfoHtml);
     $('.planet-modal').modal('show');
+    planetSound.play();
   });
 
   $('.planet-modal').on('click', 'button', () => {
