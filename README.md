@@ -1,6 +1,6 @@
 # _Super Galactic Age Calculator_
 
-#### _Application taking a user's age, health, and gender, then calculating their age and life expectancy of other planets, November 15th, 2019_
+#### _Application taking a user's age, health, and gender, then calculating their age and life expectancy in other planets' years, November 15th, 2019_
 
 #### By _**Liam Kenna**_
 
