@@ -1,8 +1,8 @@
-import { Galactic } from './galactic.js';
+import { Calculator } from './galactic.js';
 
 export class User {
   constructor(age, gender, health) {
-    this.galactic = new Galactic();
+    this.calculator = new Calculator();
     this.age = age;
     this.gender = gender;
     this.health = health;
@@ -20,29 +20,29 @@ export class User {
   }
 
   getGalacticAge() {
-    this.galactic.planets.forEach(planet => {
-      const planetAge = this.galactic.getAge(this.age, planet);
+    this.calculator.planets.forEach(planet => {
+      const planetAge = this.calculator.getAge(this.age, planet);
       this[`age${planet}`] = planetAge;
     });
   }
 
   getGalacticLifeExpectancy() {
-    this.galactic.planets.forEach(planet => {
-      const planetLE = this.galactic.getPlanetLE(this.lifeExpectancyEarth, planet);
+    this.calculator.planets.forEach(planet => {
+      const planetLE = this.calculator.getPlanetLE(this.lifeExpectancyEarth, planet);
       this[`lifeExpectancy${planet}`] = planetLE;
     });
   }
 
   getYearsLeft() {
-    this.galactic.planets.forEach(planet => {
+    this.calculator.planets.forEach(planet => {
       const planetYL = this[`lifeExpectancy${planet}`] - this[`age${planet}`];
       this[`yearsLeft${planet}`] = planetYL;
     });
   }
 
   getSunAndMayflyAge() {
-    this.ageRelativeToSun = this.galactic.getAgeRelativeToSun(this.age);
-    this.ageInMayflyLives = this.galactic.getAgeInMayflyLives(this.age);
+    this.ageRelativeToSun = this.calculator.getAgeRelativeToSun(this.age);
+    this.ageInMayflyLives = this.calculator.getAgeInMayflyLives(this.age);
   }
 
 }

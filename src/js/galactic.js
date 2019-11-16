@@ -1,4 +1,4 @@
-export class Galactic {
+export class Calculator {
   constructor() {
     this.planets = ['Mercury','Venus','Mars','Jupiter'];
     this.modMercury = .24;

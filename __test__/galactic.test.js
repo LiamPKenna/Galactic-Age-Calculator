@@ -1,50 +1,50 @@
-import { Galactic } from './../src/js/galactic.js';
+import { Calculator } from './../src/js/galactic.js';
 import { User } from './../src/js/user.js';
 
-describe('Galactic', () => {
+describe('Calculator', () => {
 
-  let galactic;
+  let calculator;
   let user;
 
   beforeEach(() => {
-    galactic = new Galactic();
+    calculator = new Calculator();
     user = new User(20, "N", 7);
   });
 
   test('should construct an object containing an array of available planets', () => {
-    expect(galactic.planets).toEqual(['Mercury','Venus','Mars','Jupiter']);
+    expect(calculator.planets).toEqual(['Mercury','Venus','Mars','Jupiter']);
   });
 
   test('should construct an object with the multiplier for Mercury', () => {
-    expect(galactic.modMercury).toEqual(.24);
+    expect(calculator.modMercury).toEqual(.24);
   });
 
   test('should construct an object with the multiplier for Venus', () => {
-    expect(galactic.modVenus).toEqual(.62);
+    expect(calculator.modVenus).toEqual(.62);
   });
 
   test('should construct an object with the multiplier for Mars', () => {
-    expect(galactic.modMars).toEqual(1.88);
+    expect(calculator.modMars).toEqual(1.88);
   });
 
   test('should construct an object with the multiplier for Jupiter', () => {
-    expect(galactic.modJupiter).toEqual(11.86);
+    expect(calculator.modJupiter).toEqual(11.86);
   });
 
   test('should return input age multiplied by the number for the selected planet', () => {
-    expect(galactic.getAge(20, "Mars")).toEqual(37);
+    expect(calculator.getAge(20, "Mars")).toEqual(37);
   });
 
   test('should return user\'s life expectancy for the selected planet', () => {
-    expect(galactic.getPlanetLE(user.lifeExpectancyEarth, 'Venus')).toEqual(55);
+    expect(calculator.getPlanetLE(user.lifeExpectancyEarth, 'Venus')).toEqual(55);
   });
 
   test('should return user age in mayfly lifespans', () => {
-    expect(galactic.getAgeInMayflyLives(20)).toEqual(2102400);
+    expect(calculator.getAgeInMayflyLives(20)).toEqual(2102400);
   });
 
   test('should calculate user age relative to the age of the sun', () => {
-    expect(galactic.getAgeRelativeToSun(20)).toEqual(4.344992396263306e-9);
+    expect(calculator.getAgeRelativeToSun(20)).toEqual(4.344992396263306e-9);
   });
 
 });
