@@ -76,3 +76,9 @@ img {
 #start-over {
   margin-top: 50px;
 }
+
+@media (max-width: 500px) {
+  .planet-info, .age-modal {
+    padding: 20px;
+  }
+}
