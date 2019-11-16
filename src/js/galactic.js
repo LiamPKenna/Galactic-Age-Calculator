@@ -8,11 +8,11 @@ export class Calculator {
   }
 
   getAge(earthAge, planet) {
-    return Math.floor(earthAge * this[`mod${planet}`]);
+    return Math.floor(earthAge / this[`mod${planet}`]);
   }
 
   getPlanetLE(earthlifeExpectancy, planet) {
-    const planetLE = Math.floor(earthlifeExpectancy * this[`mod${planet}`]);
+    const planetLE = Math.floor(earthlifeExpectancy / this[`mod${planet}`]);
     return planetLE;
   }
 

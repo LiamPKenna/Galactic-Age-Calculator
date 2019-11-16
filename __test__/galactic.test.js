@@ -32,11 +32,11 @@ describe('Calculator', () => {
   });
 
   test('should return input age multiplied by the number for the selected planet', () => {
-    expect(calculator.getAge(20, "Mars")).toEqual(37);
+    expect(calculator.getAge(20, "Mars")).toEqual(10);
   });
 
   test('should return user\'s life expectancy for the selected planet', () => {
-    expect(calculator.getPlanetLE(user.lifeExpectancyEarth, 'Venus')).toEqual(55);
+    expect(calculator.getPlanetLE(user.lifeExpectancyEarth, 'Venus')).toEqual(143);
   });
 
   test('should return user age in mayfly lifespans', () => {
@@ -68,15 +68,15 @@ describe('User', () => {
   });
 
   test('should use galactic calculator to get current age for each available planet', () => {
-    expect(user.ageMars).toEqual(37);
+    expect(user.ageMars).toEqual(10);
   });
 
   test('should use galactic calculator to get life expectancy for each available planet', () => {
-    expect(user.lifeExpectancyVenus).toEqual(55);
+    expect(user.lifeExpectancyVenus).toEqual(143);
   });
 
   test('should determine how many years a user has left to live on each planet', () => {
-    expect(user.yearsLeftVenus).toEqual(43);
+    expect(user.yearsLeftVenus).toEqual(111);
   });
 
   test('should calculate user age compared to sun age and mayfly lifespan', () => {
