@@ -46,6 +46,10 @@ $(document).ready(function(){
     $('.planet-modal').modal('show');
   });
 
+  $('.planet-modal').on('click', 'button', () => {
+    $('.planet-modal').modal('hide');
+  });
+
   $('#start-over').click(() => {
     window.scrollTo(0,0);
     location.reload();
