@@ -15,23 +15,23 @@ describe('Calculator', () => {
     expect(calculator.planets).toEqual(['Mercury','Venus','Mars','Jupiter']);
   });
 
-  test('should construct an object with the multiplier for Mercury', () => {
+  test('should construct an object with the length of a year on Mercury in Earth years', () => {
     expect(calculator.modMercury).toEqual(.24);
   });
 
-  test('should construct an object with the multiplier for Venus', () => {
+  test('should construct an object with the length of a year on Venus in Earth years', () => {
     expect(calculator.modVenus).toEqual(.62);
   });
 
-  test('should construct an object with the multiplier for Mars', () => {
+  test('should construct an object with the length of a year on Mars in Earth years', () => {
     expect(calculator.modMars).toEqual(1.88);
   });
 
-  test('should construct an object with the multiplier for Jupiter', () => {
+  test('should construct an object with the length of a year on Jupiter in Earth years', () => {
     expect(calculator.modJupiter).toEqual(11.86);
   });
 
-  test('should return input age multiplied by the number for the selected planet', () => {
+  test('should return input age divided by the number for the selected planet', () => {
     expect(calculator.getAge(20, "Mars")).toEqual(10);
   });
 
